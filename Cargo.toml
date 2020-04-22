@@ -1,0 +1,14 @@
+[package]
+name = "monitor"
+version = "0.1.3"
+authors = ["Bill Pikkard <k1ngloo@hotmail.com>"]
+edition = "2018"
+
+[dependencies]
+winapi = { version = "0.3.8", features = ["winuser"] }
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
