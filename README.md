@@ -1,2 +1,2 @@
 # monitor
-Console program to set all monitor's to standby power (Windows only).
+Console program to set all monitors to standby power (Windows only).
