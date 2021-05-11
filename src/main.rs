@@ -3,8 +3,6 @@ use std::time::Duration;
 use windows_bindings::Windows::Win32::WindowsAndMessaging::*;
 
 // HWND 0xFFFF sends to all windows
-// 0x0112 is WM_SYSCOMMAND
-// 0xF170 is SC_MONITORPOWER
 // MONITOR_ON = -1
 // MONITOR_STANDBY = 1
 // MONITOR_OFF = 2
