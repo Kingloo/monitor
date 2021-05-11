@@ -5,7 +5,8 @@ authors = ["Bill Pikkard <k1ngloo@hotmail.com>"]
 edition = "2018"
 
 [dependencies]
-winapi = { version = "0.3.8", features = ["winuser"] }
+windows_bindings = { path = "windows_bindings" }
+windows = "0.9.1"
 
 [profile.dev]
 opt-level = 0
