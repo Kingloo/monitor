@@ -1,6 +1,9 @@
 use std::thread::sleep;
 use std::time::Duration;
-use windows_bindings::Windows::Win32::WindowsAndMessaging::*;
+use windows_bindings::Windows::Win32::Foundation::{LPARAM, WPARAM, HWND};
+use windows_bindings::Windows::Win32::UI::WindowsAndMessaging::{
+	SendMessageW, SC_MONITORPOWER, WM_SYSCOMMAND,
+};
 
 // HWND 0xFFFF sends to all windows
 // MONITOR_ON = -1

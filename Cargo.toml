@@ -1,12 +1,12 @@
 [package]
 name = "monitor"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["Bill Pikkard <k1ngloo@hotmail.com>"]
 edition = "2018"
 
 [dependencies]
 windows_bindings = { path = "windows_bindings" }
-windows = "0.9.1"
+windows = "0.20.1"
 
 [profile.dev]
 opt-level = 0
