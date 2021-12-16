@@ -1,15 +1,19 @@
 [package]
 name = "monitor"
-version = "1.0.1"
+version = "1.1.0"
 authors = ["Bill Pikkard <k1ngloo@hotmail.com>"]
 edition = "2018"
 
-[dependencies]
-windows_bindings = { path = "windows_bindings" }
-windows = "0.20.1"
+[dependencies.windows]
+version = "0.28.0"
+features = [
+	"Win32_Foundation",
+	"Win32_UI_WindowsAndMessaging"
+]
 
 [profile.dev]
 opt-level = 0
 
 [profile.release]
 opt-level = 3
+lto = true

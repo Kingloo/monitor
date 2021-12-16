@@ -1,16 +1,18 @@
 use std::thread::sleep;
 use std::time::Duration;
-use windows_bindings::Windows::Win32::Foundation::{LPARAM, WPARAM, HWND};
-use windows_bindings::Windows::Win32::UI::WindowsAndMessaging::{
-	SendMessageW, SC_MONITORPOWER, WM_SYSCOMMAND,
-};
+use windows::core::Result;
+use windows::Win32::Foundation::{HWND, LPARAM, WPARAM};
+use windows::Win32::UI::WindowsAndMessaging::{SendMessageW, SC_MONITORPOWER, WM_SYSCOMMAND};
 
 // HWND 0xFFFF sends to all windows
-// MONITOR_ON = -1
-// MONITOR_STANDBY = 1
-// MONITOR_OFF = 2
+// WPARAM is the command to send, in this case SC_MONITORPOWER
+// LPARAM is the value to pass, one of the following
+//		MONITOR_ON = -1
+//		MONITOR_STANDBY = 1
+//		MONITOR_OFF = 2
+// https://docs.microsoft.com/en-us/windows/win32/menurc/wm-syscommand
 
-fn main() -> windows::Result<()> {
+fn main() -> Result<()> {
 	sleep(Duration::from_secs(1));
 	unsafe {
 		SendMessageW(
