@@ -2,10 +2,10 @@
 name = "monitor"
 version = "1.10.0"
 authors = ["Bill Pikkard <k1ngloo@hotmail.com>"]
-edition = "2021"
+edition = "2024"
 
 [dependencies.windows]
-version = "0.59"
+version = "0.61"
 features = [
 	"Win32_Foundation",
 	"Win32_UI_WindowsAndMessaging"
