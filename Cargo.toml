@@ -1,6 +1,6 @@
 [package]
 name = "monitor"
-version = "1.10.0"
+version = "1.11.0"
 authors = ["Bill Pikkard <k1ngloo@hotmail.com>"]
 edition = "2024"
 
